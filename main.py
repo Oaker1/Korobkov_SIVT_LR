@@ -14,14 +14,13 @@ f.write('[ ')
 for x in range(107): # 2nd number in paint
     for y in range(138): # 1st number in paint
         if img[x,y] == 255:
-            print(x,y)
             in_row_count += 1
         else:
             result = in_row_count * pixelsize
             resultstring = str(round(result, 3)) + ' '
             if in_row_count != 0:
                 f.write(resultstring)
-                print('test3')
+            result = 0
             in_row_count = 0
         y+=1
     x+=1
